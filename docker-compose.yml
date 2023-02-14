@@ -1,0 +1,14 @@
+version: '2'
+services:
+  redis:
+    image: redis
+    restart: always
+    container_name: wx-redis
+    ports:
+      - 16379:6379
+  api:
+    image: registry.cn-hangzhou.aliyuncs.com/lixh/wechat-sdk
+    restart: always
+    container_name: wx-api
+    ports:
+      - 18888:8888
